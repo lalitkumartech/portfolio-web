@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Oswald:wght@200..700&display=swap');
+
+// App.scss
+$primary-color: #282C33;
+$pimary-color2:#C778DD;
+$primary-color3:#D9D9D9;
+
+body {
+  font-family: "Fira Code", monospace !important;
+   background-color: $primary-color !important;
+   
+ 
+  .container {
+    padding: 20px;
+    color: white;
+  }
+}
+
+.header {
+  background: $primary-color !important;
+  .menu_link {
+    font-family: "Fira Code", monospace !important;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  .logo_text{
+    font-family: "Fira Code", monospace !important;
+    font-size: 20px;
+  font-weight: inherit;
+  }
+}
+
+.media_icon_row {
+  list-style: none;
+
+  li {
+    position: fixed; // Ensure context for pseudo-elements inside li
+
+    &::before {
+      content: ''; // Required for pseudo-elements
+     // background-image: url('./public/images/strok_line.png');
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100px;
+      border: 1px solid $primary-color3;
+    }
+
+    .media_left_icon {
+      position: absolute;
+      transform: translate(-48%);
+      top: 6.5rem;
+    }
+  }
+}
+
+.banner_fist_row {
+  padding: 5rem 0;
+  text-align: start;
+
+  h5 {
+    font-size: 32px;
+    font-weight: normal;
+    color: white;
+    text-transform: capitalize;
+    font-family: "Fira Code", monospace !important;
+
+    span{
+      color: $pimary-color2 ;
+      font-family: "Fira Code", monospace !important;
+    }
+}
+p{
+  font-size: 16px;
+  font-weight: normal;
+  color: $primary-color3;
+  text-transform: capitalize;
+  padding: 2rem 0;
+  font-family: "Fira Code", monospace !important;
+}
+button{
+  font-size: 15px;
+  font-weight: normal;
+  color: white;
+  text-transform: capitalize;
+  padding: .5rem 1rem;
+  border: 1px solid $pimary-color2;
+  font-family: "Fira Code", monospace !important;
+}
+img{
+  width: 100% !important;
+  padding: 2rem;
+}
+}
+
+.banner_second_row{
+  
+  p{
+  border: 1px solid #fff;
+  width: 80%;
+  margin: auto;
+  font-family: "Fira Code", monospace !important;
+  }
+}
+
+
+.banner_second_row{
+  
+  p{
+  border: 1px solid $primary-color3;
+  // width: 80%;
+  width: 100%;
+  margin: auto;
+  color: $primary-color3;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 3px;
+
+  span{
+    width: 20px;
+    height: 20px;
+    background: $pimary-color2;
+    display: block;
+    margin-right: 10px;
+  }
+
+  b{
+    color: white;
+  }
+  }
+}
+
+.bottom_caption{
+  border: 1px solid #d9d9d9;
+  width: 70%;
+  padding: 32px;
+  margin: auto;
+  position: relative;
+
+  &::before {
+    content: "“";
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    width: 3rem;
+    height: 3rem;
+    color: white;
+    font-size: 8rem;
+    transform: translate(-50%, -60%);
+    background: $primary-color;
+    line-height: 7rem;
+  }
+
+  &::after {
+    content: "“";
+    position: absolute;
+    bottom: 0px;
+    right: 5px;
+    width: 3rem;
+    height: 3rem;
+    color: white;
+    font-size: 8rem;
+    transform: translate(-50%, 45%);
+    background: #282C33;
+    line-height: 7rem;
+  }
+
+  h4 {
+    font-size: 24px;
+    color: white;
+    font-family: "Fira Code", monospace ;
+  }
+}
+
+// =====Project_section_start
+
+.project_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h4{
+    font-size: 32px;
+  color: white;
+  font-family: "Fira Code", monospace ;
+  position: relative;
+
+  &::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(3%, -50%);
+    width: 30rem;
+    height: 2px;
+    border: 1px solid #C778DD;
+  }
+
+    span{
+      color: $pimary-color2;
+    }
+  }
+  p{
+    
+    a{
+      text-decoration: none;
+      font-size: 16px;
+    color: white;
+    font-family: "Fira Code", monospace ;
+
+    }
+  }
+}
+
+.project_about {
+  border: 1px solid $primary-color3;
+
+  img{
+    width: 100%;
+    margin-bottom: -6px;
+  }
+  p{
+    font-size: 16px;
+    padding: 10px;
+    color: $primary-color3;
+    text-transform: uppercase;
+    text-align: start;
+    border: 1px solid $primary-color3;
+  }
+  .project_about_detail{
+    padding: 20px 0;
+    padding-left: 10px;
+    text-align: start;
+
+    h4{
+      font-size: 24px;
+      color: white;
+      font-weight: 600;
+      font-family: "Fira Code", monospace !important;
+    }
+    h6{
+      padding: 10px 0;
+      font-size: 16px;
+      color: $primary-color3;
+      text-transform: uppercase;
+      font-family: "Fira Code", monospace !important;
+    }
+   
+      a{
+        font-size: 15px;
+    font-weight: normal;
+    color: white;
+    text-transform: capitalize;
+    padding: 0.5rem 1rem;
+    border: 1px solid $pimary-color2;
+    font-family: "Fira Code", monospace !important;
+    text-decoration: none;
+    margin: 10px 0 0;
+    display: inline flow-root list-item;
+    list-style: none;
+      }
+      
+    
+  }
+}
+ 
