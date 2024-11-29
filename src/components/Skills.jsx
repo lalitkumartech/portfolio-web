@@ -58,7 +58,35 @@ function Skills() {
           
            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6 }}>
             <Item style={{ background: "transparent", boxShadow: "none" }}>
-                <Box className="skills_row">
+                <Box className="skills_row" sx={{
+    // display: 'flex',
+    display: {xs: 'block',sm: 'block', md: 'flex'},
+    flexDirection: { xs: 'column', sm: 'row' }, // Stack in column for small screens
+    alignItems: 'baseline',
+    justifyContent: {xs: 'center', sm: 'center', md: 'space-between'},
+  }}>
+                <Box className="project_about">
+                    {/* <Typography>html scss react flash</Typography> */}
+
+                    <Box className="project_about_detail" >
+                        <Typography variant="h4" style={{BorderBottom:'1px solid #fff'}}>
+                        ChertNodes
+                        </Typography>
+                        <Typography variant="h6">html scss react flash</Typography>
+                    </Box>
+                </Box>
+
+                <Box>
+                <Box className="project_about">
+                    {/* <Typography>html scss react flash</Typography> */}
+
+                    <Box className="project_about_detail" >
+                        <Typography variant="h4" style={{BorderBottom:'1px solid #fff'}}>
+                        ChertNodes
+                        </Typography>
+                        <Typography variant="h6">html scss react flash</Typography>
+                    </Box>
+                </Box>
                 <Box className="project_about">
                     {/* <Typography>html scss react flash</Typography> */}
 
@@ -70,10 +98,50 @@ function Skills() {
                     </Box>
                 </Box>
                 </Box>
+
+                <Box>
+                <Box className="project_about">
+                    {/* <Typography>html scss react flash</Typography> */}
+
+                    <Box className="project_about_detail" >
+                        <Typography variant="h4" style={{BorderBottom:'1px solid #fff'}}>
+                        ChertNodes
+                        </Typography>
+                        <Typography variant="h6">html scss react flash</Typography>
+                    </Box>
+
+                    
+                </Box>
+
+                <Box className="project_about">
+                    {/* <Typography>html scss react flash</Typography> */}
+
+                    <Box className="project_about_detail" >
+                        <Typography variant="h4" style={{BorderBottom:'1px solid #fff'}}>
+                        ChertNodes
+                        </Typography>
+                        <Typography variant="h6">html scss react flash</Typography>
+                    </Box>
+
+                    
+                </Box>
+                <Box className="project_about">
+                    {/* <Typography>html scss react flash</Typography> */}
+
+                    <Box className="project_about_detail" >
+                        <Typography variant="h4" style={{BorderBottom:'1px solid #fff'}}>
+                        ChertNodes
+                        </Typography>
+                        <Typography variant="h6">html scss react flash</Typography>
+                    </Box>
+
+                    
+                </Box>
+                </Box>
+                </Box>
+
             </Item>
           </Grid>
-
-         
         </Grid>
       </Container>
     </>

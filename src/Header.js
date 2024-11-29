@@ -14,33 +14,51 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact', 'gallery'];
+// const navItems = ['Home', 'About', 'Contact', 'gallery'];
 
 function Header(props) {
 
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const navigate = useNavigate();
   
     const handleDrawerToggle = () => {
       setMobileOpen((prevState) => !prevState);
     };
   
     const drawer = (
-      <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-        <Typography variant="h6" sx={{ my: 2 }}>
-          MUI
+      <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} style={{background: '#282c33'}}>
+        <Typography variant="h6"
+            className='logo_text'
+            sx={{ flexGrow: 1,my: 2,textAlign: 'start',pl:2,color:'#fff' }}>
+           Web <span style={{color:'#C778DD',fontWeight:'bold'}}>Designer</span>
         </Typography>
+
         <Divider />
         <List>
-          {navItems.map((item) => (
-            <ListItem key={item} disablePadding >
-              <ListItemButton sx={{ textAlign: 'center' }}>
-                <ListItemText primary={item} />
+          {/* {navItems.map((item) => ( */}
+            <ListItem  disablePadding sx={{display: 'block'}} >
+              <ListItemButton sx={{ textAlign: 'start', color: '#fff' }}>
+                <ListItemText onClick={() => navigate('/')} primary={"Home"} />
               </ListItemButton>
+
+              <ListItemButton sx={{ textAlign: 'start', color: '#fff' }}>
+                <ListItemText onClick={()=> navigate('/about')} primary={"About Us"} />
+              </ListItemButton>
+
+              <ListItemButton sx={{ textAlign: 'start', color: '#fff' }}>
+                <ListItemText onClick={()=> navigate('/works')} primary={"Works"} />
+              </ListItemButton>
+
+              <ListItemButton sx={{ textAlign: 'start', color: '#fff' }}>
+                <ListItemText onClick={()=> navigate('/contact')} primary={"Contacts"} />
+              </ListItemButton>
+              
             </ListItem>
-          ))}
+          {/* ))} */}
         </List>
       </Box>
     );
@@ -72,11 +90,21 @@ function Header(props) {
             Web <span style={{color:'#C778DD',fontWeight:'bold'}}>Designer</span>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }} className='menu_link'>
-                {item}
+            {/* {navItems.map((item) => ( */}
+              <Button sx={{ color: '#fff' }} className='menu_link' onClick={()=> navigate('/')}>
+                 Home
               </Button>
-            ))}
+
+              <Button sx={{ color: '#fff' }} className='menu_link' onClick={()=> navigate('/about')}>
+                 About Us
+              </Button>
+              <Button sx={{ color: '#fff' }} className='menu_link' onClick={()=> navigate('/works')}>
+                 Works
+              </Button>
+              <Button sx={{ color: '#fff' }} className='menu_link' onClick={()=> navigate('/contact')}>
+                 Contacts
+              </Button>
+            {/* ))} */}
           </Box>
         </Toolbar>
       </AppBar>

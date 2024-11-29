@@ -1,18 +1,23 @@
-import Banner from './components/Banner';
-import Project from './components/Project';
-import Skills from './components/Skills';
-import Header from './Header';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import AboutMe from './components/AboutMe';
+import Layout from './components/Layout';
+import Works from './components/Works';
 import './style.scss';
+import Contact from './components/Contact';
 
 function App() {
   return (
     <>
       <div className="App">
-        <Header/>
-        <Banner/>
-        <Project/>
-        <Skills />
-     </div>
+      <BrowserRouter>
+       <Routes>
+          <Route path='/' element={<Layout/>} />
+          <Route path='/about' element={<AboutMe/>} />
+          <Route path='/works' element={<Works/>} />
+          <Route path='/contact' element={<Contact/>} />
+       </Routes>
+       </BrowserRouter>
+      </div>
     </>
   );
 }
