@@ -3,9 +3,9 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid2";
-import EmailIcon from '@mui/icons-material/Email';
-import CallIcon from '@mui/icons-material/Call';
 import { Button, Container, Toolbar, Typography } from "@mui/material";
+import Header from "../Header";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -18,10 +18,19 @@ const Item = styled(Paper)(({ theme }) => ({
   }),
 }));
 
-function Contact() {
+function AboutSection() {
+  const location = useLocation();
+
+  const navigate = useNavigate();
+  const handleRedirect = () => {
+    navigate("/about");
+  };
+
   return (
     <>
       <Box component="main">
+        <Header />
+
         <Container maxWidth="lg">
           <Grid
             container
@@ -35,7 +44,7 @@ function Contact() {
                 <Box className="project_row">
                   <Box className="project_title">
                     <Typography variant="h4">
-                      <span>#</span>contacts
+                      <span>#</span>about me
                     </Typography>
                   </Box>
                 </Box>
@@ -52,37 +61,40 @@ function Contact() {
               <Item style={{ background: "transparent", boxShadow: "none" }}>
                 <Box className="banner_fist_row" style={{ padding: "0px" }}>
                   <Typography>
-                    I’m interested in freelance opportunities. However,<br/> if you
-                    have other request or question, don’t<br/> hesitate to contact me
+                    I am Lalit Kumar,<br/>
+                    <br/>
+                     a front-end developer from Delhi, India,<br/>
+                    with experience in building responsive and user-friendly
+                    websites. I focus on creating modern web designs and
+                    ensuring smooth functionality to meet client needs. I have
+                    worked with various clients and a startup company, where I
+                    gained practical knowledge in web development and learned
+                    how to optimize websites for better performance.  I always strive to improve my skills and stay updated with the latest technologies.
                   </Typography>
-                  <Button>
-                    Read More{" "}
-                    <span style={{ paddingLeft: "5px" }}>{"~~>"}</span>
-                  </Button>
+                  {/* Conditionally render button */}
+                  {location.pathname !== "/about" && (
+                    <Button onClick={handleRedirect}>
+                      Read More{" "}
+                      <span style={{ paddingLeft: "5px" }}>{"~~>"}</span>
+                    </Button>
+                  )}
                 </Box>
               </Item>
             </Grid>
-            <Grid size={{ xs: 12, sm: 12, md: 6, lg: 6 }} sx={{
-     display: {xs: 'block', sm: 'block', md:'flex'},
-    flexDirection: { xs: 'column', sm: 'row' }, // Stack in column for small screens
-    alignItems: 'baseline',
-    justifyContent: {xs: 'center', sm: 'center', md: 'end'},
-  }}>
+            <Grid
+              size={{ xs: 12, sm: 12, md: 6, lg: 6 }}
+              sx={{
+                p: { xs: "1rem", sm: "2rem", md: "6rem" }, // Responsive font sizes
+                pt: "0rem !important",
+              }}
+            >
               <Item style={{ background: "transparent", boxShadow: "none" }}>
-              <Box className="skills_row">
-                <Box className="project_about" style={{margin: '0px'}}>
-                    {/* <Typography>html scss react flash</Typography> */}
-
-                    <Box className="project_about_detail" >
-                        <Typography variant="h4" style={{BorderBottom:'1px solid #fff'}}>
-                        Message me here
-                        </Typography>
-                        <Typography variant="h6" style={{textTransform:'lowercase',display:'flex',alignItems:'center',borderBottom: '1px solid #fff'}}><CallIcon style={{marginRight:'5px'}}/>9599362647</Typography>
-                        <Typography variant="h6" style={{textTransform:'lowercase',display:'flex',alignItems:'center',}}>
-                        <EmailIcon style={{marginRight:'5px'}}/>
-                        hubbyraj56@gmail.com</Typography>
-                    </Box>
-                </Box>
+                <Box className="banner_second_row">
+                  <img
+                    style={{ width: "100%" }}
+                    src="/images/about_me.png"
+                    alt="about me"
+                  />
                 </Box>
               </Item>
             </Grid>
@@ -93,4 +105,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default AboutSection;

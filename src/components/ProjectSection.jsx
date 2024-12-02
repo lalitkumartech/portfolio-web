@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid2";
 import { Button, Container, Toolbar, Typography } from "@mui/material";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: "#fff",
@@ -16,7 +17,15 @@ const Item = styled(Paper)(({ theme }) => ({
   }),
 }));
 
-function Project() {
+function ProjectSection() {
+  const location = useLocation();
+
+  const navigate = useNavigate();
+
+  const handleRedirect = () =>{
+    navigate('/works') //Redirect to work page
+  }
+
   return (
     <>
       <Container maxWidth="lg">
@@ -34,11 +43,16 @@ function Project() {
                   <Typography variant="h4">
                     <span>#</span>project
                   </Typography>
-                  <Typography>
-                    <a href="!#">
+
+                  {/* Conditionally render button */}
+      {location.pathname !== '/works' && (
+        <Typography>
+                    <Button href="" onClick={handleRedirect}>
                       view all <span>{"~~>"}</span>
-                    </a>
+                    </Button>
                   </Typography>
+      )}
+                  
                 </Box>
               </Box>
             </Item>
@@ -100,4 +114,4 @@ function Project() {
   );
 }
 
-export default Project;
+export default ProjectSection;

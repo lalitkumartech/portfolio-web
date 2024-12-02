@@ -70,11 +70,18 @@ function Skills() {
 
                     <Box className="project_about_detail" >
                         <Typography variant="h4" style={{BorderBottom:'1px solid #fff'}}>
-                        ChertNodes
+                        Library
                         </Typography>
-                        <Typography variant="h6">html scss react flash</Typography>
+                        <Typography variant="h6">Bootstrap, Mui,</Typography>
+                    </Box>
+                    <Box className="project_about_detail" >
+                        <Typography variant="h4" style={{BorderBottom:'1px solid #fff'}}>
+                        Tool
+                        </Typography>
+                        <Typography variant="h6">Visual Studio Code (VSCode), Figma, photoshop,</Typography>
                     </Box>
                 </Box>
+                
 
                 <Box>
                 <Box className="project_about">
@@ -82,61 +89,55 @@ function Skills() {
 
                     <Box className="project_about_detail" >
                         <Typography variant="h4" style={{BorderBottom:'1px solid #fff'}}>
-                        ChertNodes
+                        Web Development
                         </Typography>
-                        <Typography variant="h6">html scss react flash</Typography>
+                        <Typography variant="h6">HTML5, CSS3, SCSS, JavaScript, React.js, Tailwind CSS, Bootstrap 5, Material-UI (MUI).</Typography>
                     </Box>
                 </Box>
                 <Box className="project_about">
-                    {/* <Typography>html scss react flash</Typography> */}
+                    
 
                     <Box className="project_about_detail" >
                         <Typography variant="h4" style={{BorderBottom:'1px solid #fff'}}>
-                        ChertNodes
+                        Framework
                         </Typography>
-                        <Typography variant="h6">html scss react flash</Typography>
+                        <Typography variant="h6">Wordpress</Typography>
                     </Box>
                 </Box>
                 </Box>
 
                 <Box>
-                <Box className="project_about">
-                    {/* <Typography>html scss react flash</Typography> */}
+              
 
+                
+                <Box className="project_about">
+                   
                     <Box className="project_about_detail" >
                         <Typography variant="h4" style={{BorderBottom:'1px solid #fff'}}>
-                        ChertNodes
+                        Key Areas
                         </Typography>
-                        <Typography variant="h6">html scss react flash</Typography>
-                    </Box>
-
-                    
-                </Box>
-
-                <Box className="project_about">
-                    {/* <Typography>html scss react flash</Typography> */}
-
-                    <Box className="project_about_detail" >
-                        <Typography variant="h4" style={{BorderBottom:'1px solid #fff'}}>
-                        ChertNodes
-                        </Typography>
-                        <Typography variant="h6">html scss react flash</Typography>
+                        <Typography variant="h6">
+                        Responsive Design.
+                        <br/>
+Website Optimization.<br/>
+Clean and Maintainable Code.
+                         </Typography>
                     </Box>
 
                     
                 </Box>
                 <Box className="project_about">
-                    {/* <Typography>html scss react flash</Typography> */}
-
+                   
                     <Box className="project_about_detail" >
                         <Typography variant="h4" style={{BorderBottom:'1px solid #fff'}}>
-                        ChertNodes
+                        Other
                         </Typography>
-                        <Typography variant="h6">html scss react flash</Typography>
+                        <Typography variant="h6">GitHub, website Optimizing sites </Typography>
                     </Box>
 
                     
                 </Box>
+
                 </Box>
                 </Box>
 

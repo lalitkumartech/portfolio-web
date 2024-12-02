@@ -101,7 +101,7 @@ function Header(props) {
               <Button sx={{ color: '#fff' }} className='menu_link' onClick={()=> navigate('/works')}>
                  Works
               </Button>
-              <Button sx={{ color: '#fff' }} className='menu_link' onClick={()=> navigate('/contact')}>
+              <Button sx={{ color: '#fff' }} className='menu_link' onClick={()=> navigate('/contacts')}>
                  Contacts
               </Button>
             {/* ))} */}

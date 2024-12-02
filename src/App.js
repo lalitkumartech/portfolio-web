@@ -1,20 +1,25 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import AboutMe from './components/AboutMe';
+import About from './menupages/About';
 import Layout from './components/Layout';
-import Works from './components/Works';
 import './style.scss';
-import Contact from './components/Contact';
+import Works from './menupages/Works';
+import Contacts from './menupages/Contacts';
+import BasicBreadcrumbs from './components/BasicBreadcrumbs';
+
+
+
 
 function App() {
   return (
     <>
       <div className="App">
       <BrowserRouter>
+      {/* <BasicBreadcrumbs/> */}
        <Routes>
           <Route path='/' element={<Layout/>} />
-          <Route path='/about' element={<AboutMe/>} />
+          <Route path='/about' element={<About/>} />
           <Route path='/works' element={<Works/>} />
-          <Route path='/contact' element={<Contact/>} />
+          <Route path='/contacts' element={<Contacts/>} />
        </Routes>
        </BrowserRouter>
       </div>

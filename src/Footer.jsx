@@ -20,6 +20,11 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function Footer() {
+  // Redirect to Github Account
+
+  const handleGitHub = ()=>{
+    window.open('https://github.com/lalitkumartech', "_blank")
+  }
   return (
     <>
       <Box component="main">
@@ -104,8 +109,8 @@ function Footer() {
                           
                         }}
                       >
-                       <a href="!#" style={{border:'0'}}> <CallIcon style={{ marginRight: "5px" }} /></a>
-                       <a href="!#" style={{border:'0'}}> <GitHubIcon style={{ marginRight: "5px" }}/></a>
+                       <Button style={{border:'0'}}> <CallIcon style={{ marginRight: "5px",color:'#D9D9D9' }} /></Button>
+                       <Button style={{border:'0'}} onClick={handleGitHub}> <GitHubIcon style={{ marginRight: "5px",color:'#D9D9D9' }}/></Button>
                        
                       </Typography>
                      

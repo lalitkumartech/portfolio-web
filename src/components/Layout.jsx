@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from '../Header';
 import Banner from './Banner';
-import Project from './Project';
+import ProjectSection from './ProjectSection';
 import Skills from './Skills';
-import AboutMe from './AboutMe';
-import Contact from './Contact';
+import AboutSection from './AboutSection';
+import ContactSection from './ContactSection';
 import Footer from '../Footer';
 
 function Layout() {
@@ -12,10 +12,10 @@ function Layout() {
     <>
         <Header/>
         <Banner/>
-        <Project/>
+        <ProjectSection/>
         <Skills />
-        <AboutMe/>
-        <Contact/>
+        <AboutSection/>
+        <ContactSection/>
         <Footer/>
     </>
   )
